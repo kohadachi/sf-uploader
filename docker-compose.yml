@@ -1,0 +1,19 @@
+version: "3.8"
+volumes:
+  db-store:
+  php-fpm-socket:
+services:
+  backend:
+    container_name: gmo
+    build: ./infra/php
+    volumes:
+      - php-fpm-socket:/var/run/php-fpm
+      - ./server:/work/server
+  web:
+    container_name: gmo-web
+    build: ./infra/nginx
+    ports:
+      - 8081:79
+    volumes:
+      - php-fpm-socket:/var/run/php-fpm
+      - ./server:/work/server
