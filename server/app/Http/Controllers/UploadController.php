@@ -45,7 +45,7 @@ class UploadController extends Controller
 				$url = "https://jasmine-lc.my.salesforce.com/services/data/v54.0/sobjects/ContentVersion/";
 				$params = [
 					'headers' => [
-						'Authorization' => 'OAuth ' . "00D5h000005QViS!AQcAQIgUgRjoj1jegScb6axurxfMH6ElJOvrGrYih1W7wB9o9OI3S7QhiBqxUh7EkfKp7ukelx.D9US5lPGBG47Anx3jq8._",
+						'Authorization' => 'OAuth ' . "",
 						'Content-Type' => 'application/json',
 					],
 					'body'=>json_encode($cvJson),
@@ -65,7 +65,7 @@ class UploadController extends Controller
 				  $url = "https://jasmine-lc.my.salesforce.com/services/data/v54.0/query";
 				  $params = [
 				    'headers' => [
-				      'Authorization' => 'OAuth ' . "00D5h000005QViS!AQcAQIgUgRjoj1jegScb6axurxfMH6ElJOvrGrYih1W7wB9o9OI3S7QhiBqxUh7EkfKp7ukelx.D9US5lPGBG47Anx3jq8._"
+				      'Authorization' => 'OAuth ' . ""
 				    ],
 				    'query' => [ 'q' => $sql ]
 				  ];
@@ -90,7 +90,7 @@ class UploadController extends Controller
 					//REST APIを実行する。成功したらcontentVirsionのIDが還ってくる。
 					$params = [
 						'headers' => [
-							'Authorization' => 'OAuth ' . "00D5h000005QViS!AQcAQIgUgRjoj1jegScb6axurxfMH6ElJOvrGrYih1W7wB9o9OI3S7QhiBqxUh7EkfKp7ukelx.D9US5lPGBG47Anx3jq8._",
+							'Authorization' => 'OAuth ' . "",
 							'Content-Type' => 'application/json',
 						],
 						'body'=>json_encode($linkJson),
